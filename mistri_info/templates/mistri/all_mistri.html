@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Mistri List - Mistri
+Mistri List - Mistri
+{% endblock title %}
+
+
+{% include 'includes/header.html' %}
+
+
+{% block content %}
+<section id="all_mistri" class="section">
+    <h2>All Mistri</h2>
+
+    <table class="mistri-table">
+        <thead>
+            <tr>
+                <th>Profile</th>
+
+                <table class="mistri-table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Skill</th>
+                            <th>Location</th>
+                            <th>Phone</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="https://via.placeholder.com/50" alt="Profile"></td>
+                            <td>Ramesh</td>
+                            <td>Electrician</td>
+                            <td>Mumbai</td>
+                            <td>9876543210</td>
+
+                            {% for mistri in mistris %}
+                        <tr>
+                            <td><img src="" alt="Profile Pic"></td>
+                            <td> {{mistri.name}} </td>
+                            <td>{{mistri.skill}}</td>
+                            <td>{{mistri.location}}</td>
+                            <td>{{mistri.contact}}</td>
+                            <td>
+                                <button class="btn-view">View</button>
+                                <button class="btn-edit">Edit</button>
+                                <button class="btn-delete">Delete</button>
+                            </td>
+                        </tr>
+
+                        {% endfor %}
+
+                    </tbody>
+                </table>
+</section>
+
+{% endblock content %}
+
+{% include 'includes/footer.html' %}

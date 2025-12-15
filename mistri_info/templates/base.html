@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+
+        {% block title %}
+
+        {% endblock title %}
+
+    </title>
+    <link rel="stylesheet" href="{% static 'mistri_info/css/style.css' %}">
+</head>
+
+<body>
+
+    <!-- Header -->
+    {% include 'includes/header.html' %}
+    <!-- Home Page -->
+
+    {% block content %}
+
+    {% endblock content %}
+
+
+    <!-- All Mistri -->
+    <!-- Footer -->
+    {% include 'includes/footer.html' %}
+</body>
+
+</html>
