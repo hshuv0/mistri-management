@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-from django.shortcuts import render
-=======
+
 from django.shortcuts import render, redirect, get_object_or_404
 
 from mistri_info.models import Mistri
->>>>>>> 6736dab (second commit)
 
 # Create your views here.
 
@@ -12,12 +9,6 @@ def home(request):
     return render(request, "index.html")
 
 def add_mistri(request):
-<<<<<<< HEAD
-    return render(request, "mistri/add_mistri.html")
-
-def all_mistri(request):
-    return render(request, "mistri/all_mistri.html")
-=======
 
     if request.method == 'POST':
         Mistri.objects.create(
@@ -31,6 +22,7 @@ def all_mistri(request):
 
     return render(request, "mistri/add_mistri.html")
 
+
 def all_mistri(request):
 
     data = Mistri.objects.all()
@@ -40,4 +32,3 @@ def all_mistri(request):
     }
 
     return render(request, "mistri/all_mistri.html", context)
->>>>>>> 6736dab (second commit)
