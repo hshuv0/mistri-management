@@ -8,9 +8,6 @@ from .models import Mistri
 
 @admin.register(Mistri)
 class MistriAdmin(admin.ModelAdmin):
-
-    list_display = ('image', 'name', 'skill', 'location', 'contact' )
-
     list_display = ('image', 'name', 'skill', 'location', 'contact')
     search_fields = ('name', 'skill', 'location')
 
